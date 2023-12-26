@@ -1,5 +1,5 @@
 # ai-reminder
- A modern and interactive reminder website showcasing stunning Lottie animations, built with the power of Vite JS and React.
+ A modern and interactive reminder homepage showcasing stunning Lottie animations, built with the power of Vite JS and React.
 
 ## Getting Started
 To get started with Aiminder, simply clone the repository and run the following commands:
