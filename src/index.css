@@ -1,0 +1,315 @@
+/* 1- general styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  color: #f2f2f2;
+  background: #f86d8d;
+}
+/* for Firefox */
+
+/* end general styles */
+
+/* 2- body styles */
+.body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(135deg, #f5f7f8 10%, #5c96ec 100%);
+  overflow: hidden;
+}
+
+.body::before,
+.body::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.body::before {
+  clip-path: circle(30% at left 20%);
+  opacity: 0.4;
+  background-image: linear-gradient(135deg, #59bbf3 10%, #ff9a9e 100%);
+}
+
+.body::after {
+  opacity: 0.4;
+  clip-path: circle(25% at right 80%);
+  background-image: linear-gradient(135deg, #51a2e4 10%, #fbfbfc 100%);
+}
+
+/* end body styles */
+header {
+  .navbar {
+    .logo {
+      a {
+        text-decoration: none;
+        font-size: 22px;
+        color: #000;
+        font-weight: 500;
+      }
+      align-items: center;
+      line-height: 10px;
+    }
+    .menu {
+      li {
+        a {
+          color: #000;
+          text-decoration: none;
+          font-size: 17px;
+          font-weight: 500;
+          transition: background-color 0.5s;
+          -webkit-background-clip: text;
+          &:hover {
+            background: -webkit-linear-gradient(#eee, #333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        list-style: none;
+        margin: 0 6px;
+      }
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .buttons input {
+      outline: none;
+      color: #f2f2f2;
+      font-size: 18px;
+      font-weight: 500;
+      border-radius: 12px;
+      padding: 6px 15px;
+      border: none;
+      margin: 0 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background-image: linear-gradient(135deg, #8da3ec 10%, #59bbf3 100%);
+      &:hover {
+        transform: scale(0.97);
+      }
+    }
+    margin: auto;
+    width: 100%;
+    padding: 35px 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  height: 85vh;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 12;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-content {
+  h2 {
+    font-size: 27px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  width: 40%;
+  margin: 100px 0 0 50px;
+}
+
+.play-button {
+  position: absolute;
+  right: 50px;
+  bottom: 40px;
+}
+
+.play-button .play::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -58px;
+  background: #000;
+}
+
+*/ .play-button i {
+  height: 40px;
+  width: 40px;
+  border: 2px solid #000000;
+  line-height: 38px;
+  text-align: center;
+  margin-left: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.fa-play {
+  border-radius: 50%;
+  border: 2px solid #000;
+  padding: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/*  responsive styles */
+@media (max-width: 1120px) {
+  .mp div {
+    height: 350px !important;
+    width: 350px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  header .text-content {
+    width: 100%;
+  }
+
+  .mp {
+    margin-left: 100px !important;
+  }
+}
+
+@media (max-width: 860px) {
+  header {
+    padding: 50px 10px 15px 10px;
+  }
+  header .navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5px;
+  }
+
+  .navbar .menu {
+    margin: 10px 0 20px 0;
+  }
+
+  header .text-content {
+    margin: 60px 0 0 50px;
+    width: 70%;
+  }
+
+  header .text-content h2 {
+    font-size: 20px;
+  }
+
+  header .play-button {
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
+  }
+
+  .mp div {
+    margin-top: -30px !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .mp {
+    margin-left: 0px !important;
+  }
+
+  header .text-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 655px) {
+  header .text-content h2 {
+    font-size: 18px;
+  }
+
+  .mp div {
+    height: 300px !important;
+    width: 300px !important;
+  }
+
+  .mp div {
+    margin-top: -20px !important;
+  }
+}
+
+@media (max-width: 555px) {
+  header .text-content h2 {
+    font-size: 16px;
+  }
+
+  .mp div {
+    height: 250px !important;
+    width: 250px !important;
+  }
+
+  .mp div {
+    margin-top: -0px !important;
+  }
+
+  header .text-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  header .text-content h2 {
+    font-size: 16px;
+  }
+
+  .mp div {
+    height: 200px !important;
+    width: 200px !important;
+  }
+
+  header .text-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 590px) {
+  .mo {
+    flex-direction: column !important;
+  }
+
+  .mp div {
+    height: 170px !important;
+    width: 170px !important;
+  }
+
+  header .text-content {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 410px) {
+  header {
+    height: 100vh;
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  header .navbar {
+    padding: 15px 10px;
+  }
+}
