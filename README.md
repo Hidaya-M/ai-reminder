@@ -11,4 +11,4 @@ Install my-project with npm
  npm run dev
 ```
 # Demo
-You can view a live demo of Aiminder at https://658ad5e7215c8c9c0c6c9bec--candid-nougat-80a50e.netlify.app/.
+You can view a live demo of Aiminder at https://ai-reminder.netlify.app/.
